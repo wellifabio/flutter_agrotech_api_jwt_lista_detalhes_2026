@@ -3,7 +3,7 @@ import 'colors.dart';
 
 abstract class AppTheme {
   static ThemeData appTheme = ThemeData.light().copyWith(
-    scaffoldBackgroundColor: AppColors.p4,
+    scaffoldBackgroundColor: AppColors.p6,
     primaryColor: AppColors.p1,
     appBarTheme: AppBarTheme(
       backgroundColor: AppColors.p1,
@@ -63,7 +63,7 @@ abstract class AppTheme {
     ),
     inputDecorationTheme: InputDecorationTheme(
       filled: true,
-      fillColor: AppColors.p4,
+      fillColor: AppColors.p5,
       hintStyle: TextStyle(
         fontFamily: 'PatrickHand',
         color: AppColors.p2,

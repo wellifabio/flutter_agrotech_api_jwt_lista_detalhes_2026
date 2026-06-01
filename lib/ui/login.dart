@@ -25,6 +25,7 @@ class _LoginState extends State<Login> {
       ScaffoldMessenger.of(
         context,
       ).showSnackBar(SnackBar(content: Text(resp.body)));
+      toHome();
     } catch (e) {
       ScaffoldMessenger.of(
         context,
