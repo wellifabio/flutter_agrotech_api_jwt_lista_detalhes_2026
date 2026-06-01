@@ -11,8 +11,8 @@ class Login extends StatefulWidget {
 }
 
 class _LoginState extends State<Login> {
-  String email = "";
-  String password = "";
+  String email = "marcos@email.com";
+  String password = "senha123";
 
   Future<void> autenticar() async {
     final url = Uri.parse(Api.login);
@@ -20,11 +20,11 @@ class _LoginState extends State<Login> {
       final resp = await http.post(
         url,
         headers: {'Content-Type': 'application/json'},
-        body: '{"email":$email, "password":$password}',
+        body: '{"email": "$email", "password": "$password"}',
       );
       ScaffoldMessenger.of(
         context,
-      ).showSnackBar(SnackBar(content: Text(resp.toString())));
+      ).showSnackBar(SnackBar(content: Text(resp.body)));
     } catch (e) {
       ScaffoldMessenger.of(
         context,
